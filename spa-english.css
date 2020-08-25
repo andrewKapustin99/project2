@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  /* height: 100vh; */
+}
+ul {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.mainmenu__list li{
+  height: 25%;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+
+}
+.mainmenu__link{
+  height: 100%;
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
+.mainmenu__link:hover {
+  text-decoration: none;
+  background-color: blue;
+  color: white;
+}
+
+.wrap{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  transition: all .6s ease;
+}
+
+.header {
+  background:darkgray;
+  height: 50px;
+  position: relative;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 40px;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.sign-wrap {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.check-in,
+.sign-in,
+.sign-out {
+  font-size: 20px;
+}
+
+.sign-out {
+  display: none;
+}
+.user-name{
+  width: max-content;
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  right: 180px;
+  transform: translate(0,-50%);
+}
+.main {
+  height: 100%;
+}
+
+.main-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.nav {
+  flex-grow: 1;
+  background-color: brown;
+  min-width: 300px;
+  max-width: 300px;
+}
+
+.content {
+  position: relative;
+  flex-grow: 6;
+  background-color: cyan;
+}
+
+.footer {
+  background: #9984D4;
+  height: 80px;
+}
+
+.modal-window {
+  background: white;
+  width: 400px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.form {
+  position: relative;
+}
+.form h2 {
+  text-align: center;
+  font-size: 40px;
+}
+input{
+  border: 1px solid black;
+}
+.nameInput{
+  text-align: center;
+  margin: 15px 0;
+}
+.nameInput h3{
+  font-size: 25px;
+}
+.nameInput input{
+  font-size: 25px;
+}
+
+.passwardInput{
+  text-align: center;
+  margin: 15px 0;
+}
+.passwardInput h3 {
+  font-size: 25px;
+}
+.passwardInput input{
+  font-size: 25px;
+}
+
+.modalSave{
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 25px;
+  border-radius: 10px;
+  background-color: forestgreen;
+  color: white;
+  border: none;
+  padding-bottom: 5px;
+}
+.closeModal{
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+.overlay{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+
+.grammar-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.gramm-rus {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 80px;
+}
+
+.inputWord {
+  font-size: 30px;
+  height: 50px;
+  background: white;
+  margin: 10px 20px 40px;
+}
+
+.gramma-chech-btn {
+  margin-top: 20px;
+}
+
+.gramma-check,
+.gramma-del {
+  margin: 0 20px 0;
+}
+
+
+/*  */
+
+.wrap-stat{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.stat{
+  border: 1px solid black;
+  width: 400px;
+  height: 230px;
+  text-align: center;
+  margin: 20px 20px 50px;
+}
+.stat h2{
+  margin: 10px 0 20px;
+}
+.stat-p-one {
+  text-align: left;
+  margin: 0 0 10px 20px;
+  font-size: 20px;
+}
+.stat-p-two {
+  text-align: left;
+  margin: 0 0 10px 20px;
+  font-size: 20px;
+}
+.stat-p-three{
+  margin: 20px;
+  font-size: 20px;
+  height: 20px;
+}
+/*  */
+.local-main{
+  text-align: center;
+  margin-bottom: 50px;
+}
+.local-p{
+  font-size: 20px;
+}
+.local-list{
+  font-size: 20px;
+}
+.local-advice{
+  position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+}
+/*  */
+@media(max-width: 768px) {
+  .logo {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+  }
+  .menu-btn {
+      display: block;
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translate(0, -50%);
+  }
+
+  .nav{
+    min-width: 100vw;
+  }
+
+  .sign-in{
+      font-size: 13px;
+  }
+  .logo{
+      display: none;
+  }
+  .main-wrap {
+      flex-direction: column;
+  }
+  .nav {
+      display: none;
+  }
+  .modal-window {
+      width: 300px;
+      padding: 20px 10px;
+  }
+  .form input{
+      width: 100%;
+  }
+  .form h2{
+      font-size: 30px;
+  }
+}
+
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
